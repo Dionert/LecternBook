@@ -1,0 +1,8 @@
+name: LecternBook
+version: '${project.version}'
+main: nl.dionnek.lecternbook.LecternBook
+api-version: '1.20'
+
+commands:
+  page:
+    description: Page command.
