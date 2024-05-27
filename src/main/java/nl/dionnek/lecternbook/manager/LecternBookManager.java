@@ -30,8 +30,13 @@ public class LecternBookManager {
         }
 
         String pageContent = pages.get(pageNumber - 1);
+        String[] lines = pageContent.split("\n");
+
         MessageUtils.sendMessage(player, MessageUtils.formatMessage("&e[LB] &f[Page " + pageNumber + "/" + pages.size() + "]"));
-        MessageUtils.sendMessage(player, pageContent);
+
+        for (String line : lines) {
+            MessageUtils.sendMessage(player, line);
+        }
     }
 
     public ItemStack getBookFromLectern(Block block) {
