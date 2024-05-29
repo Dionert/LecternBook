@@ -4,5 +4,5 @@ main: nl.dionnek.lecternbook.LecternBook
 api-version: '1.20'
 
 commands:
-  page:
+  lb:
     description: Page command.

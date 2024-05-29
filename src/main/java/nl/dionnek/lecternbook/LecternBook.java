@@ -15,7 +15,7 @@ public final class LecternBook extends JavaPlugin {
         lecternBookManager = new LecternBookManager();
         instance = this;
 
-        getCommand("page").setExecutor(new LecternBookCommand());
+        getCommand("lb").setExecutor(new LecternBookCommand());
         getServer().getPluginManager().registerEvents(new LecternClickListener(), this);
 
     }

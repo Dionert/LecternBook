@@ -7,11 +7,17 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class LecternClickListener implements Listener {
 
+        /*
+         *
+         * Lectern Event
+         *
+         */
         @EventHandler
         public void onLecternInteract(PlayerInteractEvent event) {
             Player player = event.getPlayer();
@@ -28,4 +34,17 @@ public class LecternClickListener implements Listener {
                 }
             }
         }
-    }
+
+
+        /*
+        *
+        * GUI Event
+        *
+         */
+        @EventHandler
+        public void onInventoryClick(InventoryClickEvent event) {
+            if (event.getView().getTitle().equals("Lectern Book")) {
+                event.setCancelled(true);
+            }
+        }
+}
