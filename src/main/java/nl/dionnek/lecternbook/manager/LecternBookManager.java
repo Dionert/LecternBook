@@ -36,7 +36,7 @@ public class LecternBookManager {
     public void readBookToPlayer(Player player, ItemStack book, int pageNumber) {
         List<String> pages = LecternBookUtils.getBookPages(book);
 
-        if (pages.isEmpty()) {
+        if (pages == null || pages.isEmpty()) {
             MessageUtils.sendMessage(player, MessageUtils.formatMessage("&e[LB] &fThere are no pages to read."));
             return;
         }
